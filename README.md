@@ -1,4 +1,6 @@
-Web Search using SRNXG with BeautifulSoup (Optimized Deep Research)
+###Research Open WebUI
+
+This project implements an asynchronous deep research tool for Open WebUI that performs iterative internet searches using a SearXNG-compatible endpoint. 
 
 Author: Teodor Cucu (Credits to Jacob DeLacerda for giving me the Idea)
 
