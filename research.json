@@ -1,7 +1,7 @@
 """
 title:Web Search using SRNXG with BeautifulSoup (Optimized Deep Research)
 author: Teodor Cucu (Credits to Jacob DeLacerda for giving me the Idea)
-version: 0.2.2
+version: 0.2.3
 github: https://github.com/the-real-t30d0r/research-openwebui
 license: MIT
 
@@ -121,16 +121,19 @@ class Tools:
             default="", description="Comma-separated list of websites to ignore"
         )
         TOTAL_PAGES_COUNT: int = Field(
-            default=2000, description="Number of pages to search per query"
+            default=100, description="Number of pages to search per query"
         )
         RETURNED_PAGES_COUNT: int = Field(
-            default=2000, description="Number of pages to return"
+            default=100, description="Number of pages to return"
         )
         PAGE_CONTENT_WORDS_LIMIT: int = Field(
             default=6000, description="Word limit per page for context"
         )
         CITATION_LINKS: bool = Field(
             default=True, description="Include citation metadata"
+        )
+        MAX_ITERATIONS: int = Field(
+            default=5, description="Maximum iterations per query"
         )
 
     def __init__(self):
@@ -155,7 +158,11 @@ class Tools:
     def generate_report(self, topic: str, results: list) -> str:
         report = f"# Deep Research Report on {topic}\n\n"
         report += "## Mission Outcome and Planning\n"
-        report += "A series of iterative internet searches were performed. For each source, key insights, adjustments to current findings, and missing information were noted. This process repeated until sufficient data was gathered or 20 iterations were reached.\n\n"
+        report += (
+            "A series of iterative internet searches were performed. For each source, key insights, adjustments to current findings, and missing information were noted. This process repeated until sufficient data was gathered or "
+            + str(self.valves.MAX_ITERATIONS)
+            + " iterations were reached.\n\n"
+        )
         if not results:
             report += "No relevant sources were found.\n"
             return report
@@ -187,8 +194,7 @@ class Tools:
         )
         all_results = []
         seen_urls = set()
-        max_iterations = 20
-        min_results_per_iteration = 3
+        max_iterations = self.valves.MAX_ITERATIONS
         for iteration in range(max_iterations):
             offset = iteration * self.valves.TOTAL_PAGES_COUNT
             await emitter.emit(
@@ -242,15 +248,8 @@ class Tools:
                 if res and res["url"] not in seen_urls:
                     seen_urls.add(res["url"])
                     new_results.append(res)
-            if len(new_results) < min_results_per_iteration:
-                refined = self.refine_query(topic, iteration)
-                await emitter.emit(
-                    description=f"Missing Information: Only {len(new_results)} valid results found. Refining query to: '{refined}' and trying again.",
-                    status="in_progress",
-                    done=False,
-                )
-                search_query = refined
-                continue
+            if not new_results:
+                break
             all_results.extend(new_results)
             if self.valves.CITATION_LINKS and __event_emitter__:
                 for result in new_results:
