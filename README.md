@@ -19,7 +19,7 @@ This project implements an asynchronous deep research tool that performs iterati
    Then, install the prompt from [https://openwebui.com/p/t30d0r99/research].
 
 3. **Set SRXNG URL:**  
-   Set your SRXNG URL: ![Alt-Text](https://raw.githubusercontent.com/the-real-t30d0r/research-openwebui/refs/heads/main/2.png)
+   Set your SRXNG URL: ![Alt-Text](https://raw.githubusercontent.com/the-real-t30d0r/research-openwebui/refs/heads/main/6.png)
 
 4. **Open a New Chat and Activate Research:**  
    Open your chat application and enable the research mode.
