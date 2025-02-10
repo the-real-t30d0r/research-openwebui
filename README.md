@@ -6,11 +6,30 @@ Version: 0.1.5
 
 License: MIT
 
-#Overview
+# Overview
 
 This project implements an asynchronous deep research tool that performs iterative internet searches using a SearXNG-compatible endpoint. It processes search results by scraping the content of the returned pages with BeautifulSoup, refines the search query if too few results are obtained, and finally generates a comprehensive Markdown report. Throughout the search process, status updates and citation events are sent to a frontend via a callback function.
 
-#How-To-Install:
+# How-To-Install/Use :
+
+1. **Install the Tool:**  
+   First, install the tool from [https://openwebui.com/t/t30d0r99/Research/].
+
+2. **Install the Prompt:**  
+   Then, install the prompt from [https://openwebui.com/p/t30d0r99/research].
+
+3. **Open a New Chat and Activate Research:**  
+   Open your chat application and enable the research mode.
+
+4. **Use the Prompt:**  
+   Enter the prompt in the chat, replacing **(TOPIC)** with your desired topic.
+
+5. **Observe the Process:**  
+   The research is only initiated when you see status updates like "Internet search initiated..." and "Iteration X: Searching for...".  
+   Each iteration will display how many pages were fetched.
+
+6. **Completion and Citations:**  
+   Once complete, you should see the final report along with citation events listing the sources. Enjoy!
 
 
 
