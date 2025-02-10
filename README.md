@@ -1,4 +1,4 @@
-###Research Open WebUI
+### Research Open WebUI
 
 This project implements an asynchronous deep research tool for Open WebUI that performs iterative internet searches using a SearXNG-compatible endpoint. 
 
