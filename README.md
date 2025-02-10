@@ -18,17 +18,24 @@ This project implements an asynchronous deep research tool that performs iterati
 2. **Install the Prompt:**  
    Then, install the prompt from [https://openwebui.com/p/t30d0r99/research].
 
-3. **Open a New Chat and Activate Research:**  
+3. **Set SRXNG URL:**  
+   Set your SRXNG URL: ![Alt-Text](https://raw.githubusercontent.com/the-real-t30d0r/research-openwebui/refs/heads/main/2.png)
+
+4. **Open a New Chat and Activate Research:**  
    Open your chat application and enable the research mode.
+   ![Alt-Text](https://raw.githubusercontent.com/the-real-t30d0r/research-openwebui/refs/heads/main/1.png)
 
-4. **Use the Prompt:**  
+6. **Use the Prompt:**  
    Enter the prompt in the chat, replacing **(TOPIC)** with your desired topic.
+   ![Alt-Text](https://raw.githubusercontent.com/the-real-t30d0r/research-openwebui/refs/heads/main/4.png)
 
-5. **Observe the Process:**  
+8. **Observe the Process:**  
    The research is only initiated when you see status updates like "Internet search initiated..." and "Iteration X: Searching for...".  
    Each iteration will display how many pages were fetched.
+      ![Alt-Text](https://raw.githubusercontent.com/the-real-t30d0r/research-openwebui/refs/heads/main/3.png)
 
-6. **Completion and Citations:**  
+
+10. **Completion and Citations:**  
    Once complete, you should see the final report along with citation events listing the sources. Enjoy!
 
 
