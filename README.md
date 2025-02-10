@@ -37,6 +37,8 @@ This project implements an asynchronous deep research tool that performs iterati
 
 10. **Completion and Citations:**  
    Once complete, you should see the final report along with citation events listing the sources. Enjoy!
+      ![Alt-Text](https://raw.githubusercontent.com/the-real-t30d0r/research-openwebui/refs/heads/main/5.png)
+
 
 
 
