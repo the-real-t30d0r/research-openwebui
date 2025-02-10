@@ -17,7 +17,7 @@ This project implements an asynchronous deep research tool that performs iterati
 1. **Install the Tool:**  
    First, install the tool from [https://openwebui.com/t/t30d0r99/Research/].
 
-2. **Install the Prompt (OPTIONAL):**  
+2. **Install the Prompt (REQUIRED):**  
    Then, install the prompt from [https://openwebui.com/p/t30d0r99/research].
 
 3. **Set SRXNG URL:**  
