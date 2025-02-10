@@ -1,7 +1,9 @@
 Web Search using SRNXG with BeautifulSoup (Optimized Deep Research)
 
 Author: Teodor Cucu (Credits to Jacob DeLacerda for giving me the Idea)
+
 Version: 0.1.5
+
 License: MIT
 
 #Overview
