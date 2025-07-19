@@ -1,3 +1,3 @@
 ### MOVED TO MY OWN GITEA SERVER
 
-https://git.teodorgross.eu/teodorgross/research-openwebui.
+https://git.decentral.icu/teodorgross/research-openwebui.
